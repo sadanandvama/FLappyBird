@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlappyBird</title>
+    <style>body { margin: 0 auto; margin-left:600px; } #myFlappyCanvas { border: 3px solid #4f4f4f; }</style>
+</head>
+<body>
+    <!-- Eager load the spritesheet once and for all -->
+    <img id="spritesheet" src="./assets/graphics/flappy_bird_sprite.png" style="display:none; visibility: hidden;" />
+    <canvas style="align-content:center" id="myFlappyCanvas" height="650" width="350"></canvas>
+
+
+    <script type="text/javascript">
+        var c = document.getElementById('myFlappyCanvas');
+        var ctx = c.getContext('2d');
+        ctx.height = 656;
+        ctx.width = 356;
+
+    </script>
+
+    <!-- Map of sprites as they are in one large png glory, broken up -->
+    <script type="text/javascript" src="./assets/code/graphics/sprite.maps.js"></script>
+    <script type="text/javascript" src="./assets/code/graphics/sprites.js"></script>
+
+    <!-- game code -->
+
+    <script type="text/javascript" src="./assets/code/object.js"></script>
+
+    <script type="text/javascript" src="./assets/code/states/end.js"></script>
+    <script type="text/javascript" src="./assets/code/states/play.js"></script>
+    <script type="text/javascript" src="./assets/code/states/start.js"></script>
+    <script type="text/javascript" src="./assets/code/states/intro.js"></script>
+
+
+
+    <script type="text/javascript" src="./assets/code/state.js"></script>
+
+    <script type="text/javascript" src="./assets/code/game.js"></script>
+</body>
+</html>
